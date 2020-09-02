@@ -17,7 +17,7 @@ export default () =>
         .items([
             S.listItem()
                 .title('Case Studies')
-                .icon(Article)
+                .icon(Home)
                 .child(
                     S.documentList()
                         .title('Case Studies')
@@ -26,13 +26,22 @@ export default () =>
                         .params({ type: 'caseStudy' })),
             S.listItem()
                 .title('Events')
-                .icon(Article)
+                .icon(Stars)
                 .child(
                     S.documentList()
                         .title('Events')
                         .showIcons(true)
                         .filter('_type == $type')
                         .params({ type: 'event' })),
+            S.listItem()
+                .title('Participants')
+                .icon(Account)
+                .child(
+                    S.documentList()
+                        .title('Participants')
+                        .showIcons(true)
+                        .filter('_type == $type')
+                        .params({ type: 'participant' })),
             S.listItem()
                 .title('Pages')
                 .icon(Article)

@@ -1,3 +1,5 @@
+import { format, getYear } from "date-fns";
+
 export default {
     title: 'Event',
     name: 'event',
@@ -7,6 +9,29 @@ export default {
             title: 'Title',
             name: 'title',
             type: 'string'
+        },
+        {
+            title: 'Video stream ID',
+            name: 'streamId',
+            type: 'string'
+        },
+        {
+            title: 'Start date & time',
+            name: 'startDate',
+            type: 'datetime'
+        },
+        {
+            title: 'End date & time',
+            name: 'endDate',
+            type: 'datetime'
+        },
+        {
+            title: 'Main image',
+            name: 'mainImage',
+            type: 'image',
+            options: {
+                hotspot: true
+            },
         },
         {
             title: 'Content',
@@ -22,5 +47,23 @@ export default {
                 maxLength: 200
             },
         },
-    ]
+    ],
+    preview: {
+        select: {
+            title: 'title',
+            startDate: 'startDate',
+            mainImage: 'mainImage'
+        },
+        prepare(selection) {
+            const { title, startDate, mainImage } = selection
+
+            // const formattedDate = format(Date.parse(startDate), "yyyy.MM.dd hh:mm")
+
+            return {
+                title: title,
+                subtitle: startDate ? format(Date.parse(startDate), "yyyy.MM.dd – HH:mm") : '',
+                media: mainImage
+            }
+        }
+    }
 }

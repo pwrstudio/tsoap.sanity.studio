@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import page from './Page'
 import event from './Event'
 import caseStudy from './CaseStudy'
+import participant from './Participant'
 import contentEditor from './ContentEditor'
 import simpleEditor from './SimpleEditor'
 import embedBlock from './Embed'
@@ -20,5 +21,5 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([page, event, caseStudy, contentEditor, simpleEditor, embedBlock, videoBlock, audioBlock])
+  types: schemaTypes.concat([page, event, caseStudy, participant, contentEditor, simpleEditor, embedBlock, videoBlock, audioBlock])
 })

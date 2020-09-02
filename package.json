@@ -22,6 +22,7 @@
     "@sanity/default-login": "^1.150.1",
     "@sanity/desk-tool": "^1.150.5",
     "@sanity/vision": "^1.150.1",
+    "date-fns": "^2.16.1",
     "get-video-id": "^3.1.4",
     "prop-types": "^15.6",
     "react": "^16.2",

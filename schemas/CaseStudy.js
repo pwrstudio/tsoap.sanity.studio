@@ -9,6 +9,30 @@ export default {
             type: 'string'
         },
         {
+            title: 'Connected participants',
+            name: 'authors',
+            type: 'array',
+            options: {
+                editModal: 'popover'
+            },
+            of: [
+                {
+                    title: 'Participant',
+                    name: 'authorLink',
+                    type: 'reference',
+                    to: [{ type: 'participant' }]
+                }
+            ]
+        },
+        {
+            title: 'Main image',
+            name: 'mainImage',
+            type: 'image',
+            options: {
+                hotspot: true
+            },
+        },
+        {
             title: 'Content',
             name: 'content',
             type: 'contentEditor'
