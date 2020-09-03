@@ -38,6 +38,16 @@ export default {
             type: 'contentEditor'
         },
         {
+            title: 'X-coordinate',
+            name: 'x',
+            type: 'number'
+        },
+        {
+            title: 'Y-coordinate',
+            name: 'y',
+            type: 'number'
+        },
+        {
             title: 'Slug',
             name: 'slug',
             type: 'slug',

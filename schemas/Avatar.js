@@ -86,7 +86,7 @@ export default {
         {
             title: 'JSON for Spritesheet',
             name: 'spriteJson',
-            type: 'string'
+            type: 'file'
         },
         {
             title: 'Slug',
