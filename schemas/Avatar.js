@@ -71,6 +71,16 @@ export default {
             ]
         },
         {
+            title: 'Generated Spritesheet',
+            name: 'spritesheet',
+            type: 'image'
+        },
+        {
+            title: 'JSON for Spritesheet',
+            name: 'spirteJson',
+            type: 'string'
+        },
+        {
             title: 'Slug',
             name: 'slug',
             type: 'slug',
