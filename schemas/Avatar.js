@@ -77,7 +77,7 @@ export default {
         },
         {
             title: 'JSON for Spritesheet',
-            name: 'spirteJson',
+            name: 'spriteJson',
             type: 'string'
         },
         {
