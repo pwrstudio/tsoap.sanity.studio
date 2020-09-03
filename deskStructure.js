@@ -2,14 +2,13 @@ import S from "@sanity/desk-tool/structure-builder";
 
 // ICONS
 import Article from "react-icons/lib/md/note"
-import Collection from "react-icons/lib/md/collections-bookmark"
-import Book from "react-icons/lib/md/library-books"
+import Avatar from "react-icons/lib/md/image"
 import Home from "react-icons/lib/md/home"
 import Stars from "react-icons/lib/md/stars"
 import Account from "react-icons/lib/md/account-circle"
-import Verified from "react-icons/lib/md/visibility"
-import Email from "react-icons/lib/md/email"
-import Bottom from "react-icons/lib/md/vertical-align-bottom"
+import Map from "react-icons/lib/md/map"
+import Settings from "react-icons/lib/md/settings"
+
 
 export default () =>
     S.list()
@@ -50,5 +49,34 @@ export default () =>
                         .title('Pages')
                         .showIcons(true)
                         .filter('_type == $type')
-                        .params({ type: 'page' }))
+                        .params({ type: 'page' })),
+            S.divider(),
+            S.listItem()
+                .title('Avatars')
+                .icon(Avatar)
+                .child(
+                    S.documentList()
+                        .title('Avatars')
+                        .showIcons(true)
+                        .filter('_type == $type')
+                        .params({ type: 'avatar' })),
+            S.listItem()
+                .title('Maps')
+                .icon(Map)
+                .child(
+                    S.documentList()
+                        .title('Maps')
+                        .showIcons(true)
+                        .filter('_type == $type')
+                        .params({ type: 'map' })),
+            S.listItem()
+                .title("Graphics settings")
+                .icon(Settings)
+                .child(
+                    S.editor()
+                        .id('config')
+                        .schemaType("graphicsSettings")
+                        .documentId("graphics-settings")
+                ),
+
         ]);
