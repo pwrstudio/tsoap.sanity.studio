@@ -33,9 +33,22 @@ export default {
             },
         },
         {
-            title: 'Content',
+            title: 'Text',
             name: 'content',
             type: 'contentEditor'
+        },
+        {
+            title: 'Files',
+            name: 'files',
+            type: 'array',
+            of: [
+                    {
+                        type: 'image'
+                    },
+                    {
+                        type: 'file'
+                    }
+            ]
         },
         {
             title: 'X-coordinate',
