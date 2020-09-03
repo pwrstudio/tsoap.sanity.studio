@@ -8,7 +8,7 @@ import Stars from "react-icons/lib/md/stars"
 import Account from "react-icons/lib/md/account-circle"
 import Map from "react-icons/lib/md/map"
 import Settings from "react-icons/lib/md/settings"
-
+import Collections from "react-icons/lib/md/collections"
 
 export default () =>
     S.list()
@@ -52,31 +52,39 @@ export default () =>
                         .params({ type: 'page' })),
             S.divider(),
             S.listItem()
-                .title('Avatars')
-                .icon(Avatar)
+                .title('Graphics')
+                .icon(Collections)
                 .child(
-                    S.documentList()
-                        .title('Avatars')
-                        .showIcons(true)
-                        .filter('_type == $type')
-                        .params({ type: 'avatar' })),
-            S.listItem()
-                .title('Maps')
-                .icon(Map)
-                .child(
-                    S.documentList()
-                        .title('Maps')
-                        .showIcons(true)
-                        .filter('_type == $type')
-                        .params({ type: 'map' })),
-            S.listItem()
-                .title("Graphics settings")
-                .icon(Settings)
-                .child(
-                    S.editor()
-                        .id('config')
-                        .schemaType("graphicsSettings")
-                        .documentId("graphics-settings")
+                    S.list()
+                    .title("Graphics")
+                    .items([
+                        S.listItem()
+                            .title('Avatars')
+                            .icon(Avatar)
+                            .child(
+                                S.documentList()
+                                    .title('Avatars')
+                                    .showIcons(true)
+                                    .filter('_type == $type')
+                                    .params({ type: 'avatar' })),
+                        S.listItem()
+                            .title('Maps')
+                            .icon(Map)
+                            .child(
+                                S.documentList()
+                                    .title('Maps')
+                                    .showIcons(true)
+                                    .filter('_type == $type')
+                                    .params({ type: 'map' })),
+                        S.listItem()
+                            .title("Graphics settings")
+                            .icon(Settings)
+                            .child(
+                                S.editor()
+                                    .id('config')
+                                    .schemaType("graphicsSettings")
+                                    .documentId("graphics-settings")
+                            ),
+                        ]),
                 ),
-
         ]);

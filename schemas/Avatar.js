@@ -107,7 +107,7 @@ export default {
 
             let previewImage = {}
 
-            if (rest.length > 0) {
+            if (rest && rest.length > 0) {
                 previewImage = rest[0]
             } else {
                 previewImage = AvatarIcon
