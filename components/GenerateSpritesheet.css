@@ -1,33 +1,14 @@
-.header {
-    font-weight: bold;
-}
-
-.tweet {
-    padding-top: 15px;
-    padding-bottom : 10px;
-    border-bottom: 1px solid lightgray;
-    cursor: pointer;
-}
-
-.tweet:hover {
-    background: lightgray;
-}
-
-.list-tweets {
-    max-height: 800px;
-    overflow: scroll;
-}
-
 .container {
     margin-bottom: 20px;
 }
 
 .getTweets {
-    padding: 15px;
+    padding: 25px;
     border-radius: 4px;
     outline: 0;
     border: 0;
     cursor: pointer;
+    background: lightgreen;
 }
 
 .getTweets:hover {
