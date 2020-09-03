@@ -1,4 +1,6 @@
 import AvatarIcon from "react-icons/lib/md/image"
+import GenerateSpritesheet from '../components/GenerateSpritesheet'
+
 
 export default {
     title: 'Avatar',
@@ -69,6 +71,12 @@ export default {
                     type: 'image'
                 }
             ]
+        },
+        {
+            title: 'Generate Spritesheet',
+            name: 'fetch',
+            type: 'string',
+            inputComponent: GenerateSpritesheet
         },
         {
             title: 'Generated Spritesheet',
