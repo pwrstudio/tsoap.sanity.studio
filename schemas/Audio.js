@@ -19,6 +19,11 @@ export default {
             type: 'file',
             title: 'Audio file',
             description: 'File format: mp3'
+        },
+        {
+            title: 'Preview image',
+            name: 'previewImage',
+            type: 'image'
         }
     ],
     preview: {

@@ -11,6 +11,22 @@ export default {
             type: 'string'
         },
         {
+            title: 'Connected participants',
+            name: 'authors',
+            type: 'array',
+            options: {
+                editModal: 'popover'
+            },
+            of: [
+                {
+                    title: 'Participant',
+                    name: 'authorLink',
+                    type: 'reference',
+                    to: [{ type: 'participant' }]
+                }
+            ]
+        },
+        {
             title: 'Video stream ID',
             name: 'streamId',
             type: 'string'
