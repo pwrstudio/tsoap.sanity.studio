@@ -26,6 +26,12 @@ export default {
             ]
         },
         {
+            title: 'Active map',
+            name: 'mapLink',
+            type: 'reference',
+            to: [{ type: 'gfxMap' }]
+        },
+        {
             title: 'Slug',
             name: 'slug',
             type: 'slug',

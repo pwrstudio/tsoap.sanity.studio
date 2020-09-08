@@ -42,12 +42,12 @@ export default {
             name: 'files',
             type: 'array',
             of: [
-                    {
-                        type: 'image'
-                    },
-                    {
-                        type: 'file'
-                    }
+                {
+                    type: 'image'
+                },
+                {
+                    type: 'file'
+                }
             ]
         },
         {
@@ -59,6 +59,12 @@ export default {
             title: 'Y-coordinate',
             name: 'y',
             type: 'number'
+        },
+        {
+            title: 'Sprite',
+            name: 'spriteLink',
+            type: 'reference',
+            to: [{ type: 'caseStudySprite' }]
         },
         {
             title: 'Slug',

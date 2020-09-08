@@ -15,6 +15,7 @@ import embedBlock from './Embed'
 import videoBlock from './Video'
 import audioBlock from './Audio'
 import gfxAvatar from './Avatar'
+import gfxCaseStudySprite from './CaseStudySprite'
 import gfxMap from './Map'
 import graphicsSettings from './GraphicsSettings'
 
@@ -25,5 +26,5 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([graphicsSettings, gfxAvatar, gfxMap, page, event, caseStudy, participant, contentEditor, simpleEditor, embedBlock, videoBlock, audioBlock])
+  types: schemaTypes.concat([graphicsSettings, gfxAvatar, gfxMap, gfxCaseStudySprite, page, event, caseStudy, participant, contentEditor, simpleEditor, embedBlock, videoBlock, audioBlock])
 })

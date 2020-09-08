@@ -56,35 +56,44 @@ export default () =>
                 .icon(Collections)
                 .child(
                     S.list()
-                    .title("Graphics")
-                    .items([
-                        S.listItem()
-                            .title('Avatars')
-                            .icon(Avatar)
-                            .child(
-                                S.documentList()
-                                    .title('Avatars')
-                                    .showIcons(true)
-                                    .filter('_type == $type')
-                                    .params({ type: 'avatar' })),
-                        S.listItem()
-                            .title('Maps')
-                            .icon(Map)
-                            .child(
-                                S.documentList()
-                                    .title('Maps')
-                                    .showIcons(true)
-                                    .filter('_type == $type')
-                                    .params({ type: 'map' })),
-                        S.listItem()
-                            .title("Graphics settings")
-                            .icon(Settings)
-                            .child(
-                                S.editor()
-                                    .id('config')
-                                    .schemaType("graphicsSettings")
-                                    .documentId("graphics-settings")
-                            ),
+                        .title("Graphics")
+                        .items([
+                            S.listItem()
+                                .title('Avatars')
+                                .icon(Avatar)
+                                .child(
+                                    S.documentList()
+                                        .title('Avatars')
+                                        .showIcons(true)
+                                        .filter('_type == $type')
+                                        .params({ type: 'avatar' })),
+                            S.listItem()
+                                .title('Case Study Sprites')
+                                .icon(Home)
+                                .child(
+                                    S.documentList()
+                                        .title('Case Study Sprites')
+                                        .showIcons(true)
+                                        .filter('_type == $type')
+                                        .params({ type: 'caseStudySprite' })),
+                            S.listItem()
+                                .title('Maps')
+                                .icon(Map)
+                                .child(
+                                    S.documentList()
+                                        .title('Maps')
+                                        .showIcons(true)
+                                        .filter('_type == $type')
+                                        .params({ type: 'gfxMap' })),
+                            S.listItem()
+                                .title("Graphics settings")
+                                .icon(Settings)
+                                .child(
+                                    S.editor()
+                                        .id('config')
+                                        .schemaType("graphicsSettings")
+                                        .documentId("graphics-settings")
+                                ),
                         ]),
                 ),
         ]);
