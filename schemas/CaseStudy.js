@@ -46,7 +46,16 @@ export default {
                     type: 'image'
                 },
                 {
-                    type: 'file'
+                    type: 'audioBlock'
+                },
+                {
+                    type: 'videoBlock'
+                },
+                {
+                    type: 'pdfBlock'
+                },
+                {
+                    type: 'fileBlock'
                 }
             ]
         },

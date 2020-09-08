@@ -9,37 +9,21 @@ export default {
     icon: MovieIcon,
     fields: [
         {
+            title: 'Title',
+            name: 'title',
+            type: 'string'
+        },
+        {
             name: 'videoFile',
             type: 'file',
             title: 'video file',
             description: 'File format: mp4',
         },
         {
-            title: 'Autospela',
-            name: 'autoPlay',
-            type: 'boolean',
-        },
-        {
-            title: 'Bildtext',
-            name: 'caption',
-            type: 'simpleEditor',
-        },
-        {
-            title: 'Fullbredd',
-            name: 'fullWidth',
-            type: 'boolean',
-            options: {
-                isHighlighted: true
-            }
-        },
-        {
-            title: 'Bakgrundsfärg',
-            name: 'backgroundColor',
-            type: 'color',
-            options: {
-                isHighlighted: true
-            }
-        },
+            title: 'Preview image',
+            name: 'previewImage',
+            type: 'image'
+        }
     ],
     preview: {
         select: {
