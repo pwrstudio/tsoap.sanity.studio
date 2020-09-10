@@ -19,11 +19,11 @@ class GenerateSpritesheet extends React.Component {
     // // 5. Declare shape of React properties
     static propTypes = {
         type: PropTypes.shape({
-          title: PropTypes.string,
+            title: PropTypes.string,
         }).isRequired,
         value: PropTypes.string,
         onChange: PropTypes.func.isRequired
-      };
+    };
 
     message = ''
     working = false
@@ -48,7 +48,9 @@ class GenerateSpritesheet extends React.Component {
             redirect: 'follow'
         };
 
-        fetch("https://graphics.tsoap.dev/avatar", requestOptions)
+        const url = this.props.document._type == 'caseStudySprite' ? "https://graphics.tsoap.dev/case-study" : "https://graphics.tsoap.dev/avatar";
+
+        fetch(url, requestOptions)
             .then(response => response.json())
             .then(result => {
                 this.message = 'Spritesheet succesfully generated!'
@@ -68,7 +70,7 @@ class GenerateSpritesheet extends React.Component {
 
 
     render = () => {
-        const {value} = this.props
+        const { value } = this.props
 
         return (
             <FormField >
@@ -77,11 +79,11 @@ class GenerateSpritesheet extends React.Component {
                         genButton: true,
                         working: this.working,
                         error: this.error
-                        })} onClick={this.hitServer}>Generate Spritesheet</button>
+                    })} onClick={this.hitServer}>Generate Spritesheet</button>
                     <div className={classNames({
                         message: true,
                         error: this.error
-                        })}>{this.message}</div>
+                    })}>{this.message}</div>
                     <div className='header'>Spritesheet last generated at: {value}</div>
                 </div>
             </FormField>

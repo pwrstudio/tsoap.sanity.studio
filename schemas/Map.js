@@ -9,12 +9,16 @@ export default {
             type: 'string'
         },
         {
-            title: 'Main image',
+            title: 'Main map texture',
+            description: '4000x4000 pixel png',
             name: 'mainImage',
-            type: 'image',
-            options: {
-                hotspot: true
-            },
+            type: 'image'
+        },
+        {
+            title: 'Pathfinding grid',
+            description: '400x400 pixel png',
+            name: 'pathfindingGrid',
+            type: 'image'
         },
         {
             title: 'Slug',

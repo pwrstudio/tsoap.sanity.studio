@@ -42,21 +42,21 @@ export default {
             name: 'files',
             type: 'array',
             of: [
-                    {
-                        type: 'image'
-                    },
-                    {
-                        type: 'audioBlock'
-                    },
-                    {
-                        type: 'videoBlock'
-                    },
-                    {
-                        type: 'pdfBlock'
-                    },
-                    {
-                        type: 'fileBlock'
-                    }
+                {
+                    type: 'image'
+                },
+                {
+                    type: 'audioBlock'
+                },
+                {
+                    type: 'videoBlock'
+                },
+                {
+                    type: 'pdfBlock'
+                },
+                {
+                    type: 'fileBlock'
+                }
             ]
         },
         {
@@ -68,6 +68,12 @@ export default {
             title: 'Y-coordinate',
             name: 'y',
             type: 'number'
+        },
+        {
+            title: 'Sprite',
+            name: 'spriteLink',
+            type: 'reference',
+            to: [{ type: 'caseStudySprite' }]
         },
         {
             title: 'Slug',
