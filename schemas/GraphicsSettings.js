@@ -1,5 +1,3 @@
-import LoadGrid from '../components/LoadGrid'
-
 export default {
     title: 'Graphics settings',
     name: 'graphicsSettings',
@@ -32,12 +30,6 @@ export default {
             name: 'mapLink',
             type: 'reference',
             to: [{ type: 'gfxMap' }]
-        },
-        {
-            title: 'Load grid',
-            name: 'fetch',
-            type: 'string',
-            inputComponent: LoadGrid
         }
     ]
 }

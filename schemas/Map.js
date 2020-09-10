@@ -1,3 +1,5 @@
+import LoadGrid from '../components/LoadGrid'
+
 export default {
     title: 'Map',
     name: 'gfxMap',
@@ -21,13 +23,10 @@ export default {
             type: 'image'
         },
         {
-            title: 'Slug',
-            name: 'slug',
-            type: 'slug',
-            options: {
-                source: 'title',
-                maxLength: 200
-            },
-        },
+            title: 'Load grid',
+            name: 'fetch',
+            type: 'string',
+            inputComponent: LoadGrid
+        }
     ]
 }
