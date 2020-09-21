@@ -8,6 +8,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 import page from "./Page"
 import event from "./Event"
 import caseStudy from "./CaseStudy"
+import seminar from "./Seminar"
 import participant from "./Participant"
 import contentEditor from "./ContentEditor"
 import simpleEditor from "./SimpleEditor"
@@ -37,6 +38,7 @@ export default createSchema({
     page,
     event,
     caseStudy,
+    seminar,
     participant,
     contentEditor,
     simpleEditor,

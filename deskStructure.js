@@ -4,7 +4,8 @@ import S from "@sanity/desk-tool/structure-builder"
 import Article from "react-icons/lib/md/note"
 import Avatar from "react-icons/lib/md/image"
 import Home from "react-icons/lib/md/home"
-import Stars from "react-icons/lib/md/stars"
+import Event from "react-icons/lib/md/event"
+import SMS from "react-icons/lib/md/sms"
 import Account from "react-icons/lib/md/account-circle"
 import Map from "react-icons/lib/md/map"
 import Settings from "react-icons/lib/md/settings"
@@ -27,13 +28,23 @@ export default () =>
         ),
       S.listItem()
         .title("Events")
-        .icon(Stars)
+        .icon(Event)
         .child(
           S.documentList()
             .title("Events")
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "event" })
+        ),
+      S.listItem()
+        .title("Seminars")
+        .icon(SMS)
+        .child(
+          S.documentList()
+            .title("Seminars")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "seminar" })
         ),
       S.listItem()
         .title("Participants")
