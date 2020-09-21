@@ -7,6 +7,7 @@ export default {
       title: "Name",
       name: "name",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Username",
@@ -34,6 +35,7 @@ export default {
         source: "name",
         maxLength: 200,
       },
+      validation: (Rule) => Rule.required(),
     },
   ],
 }

@@ -1,74 +1,67 @@
 import AvatarIcon from "react-icons/lib/md/image"
-import GenerateSpritesheet from '../components/GenerateSpritesheet'
-
+import GenerateSpritesheet from "../components/GenerateSpritesheet"
 
 export default {
-    title: 'Case Study Sprite',
-    name: 'caseStudySprite',
-    type: 'document',
-    fields: [
+  title: "Case Study Sprite",
+  name: "caseStudySprite",
+  type: "document",
+  fields: [
+    {
+      title: "Title",
+      name: "title",
+      type: "string",
+    },
+    {
+      title: "Frames",
+      name: "frames",
+      type: "array",
+      of: [
         {
-            title: 'Title',
-            name: 'title',
-            type: 'string'
+          title: "Frame",
+          name: "frame",
+          type: "image",
         },
-        {
-            title: 'Frames',
-            name: 'frames',
-            type: 'array',
-            of: [
-                {
-                    title: 'Frame',
-                    name: 'frame',
-                    type: 'image'
-                }
-            ]
-        },
-        {
-            title: 'Generate Spritesheet',
-            name: 'fetch',
-            type: 'string',
-            inputComponent: GenerateSpritesheet
-        },
-        {
-            title: 'Generated Spritesheet',
-            name: 'spritesheet',
-            type: 'image'
-        },
-        {
-            title: 'JSON for Spritesheet',
-            name: 'spriteJson',
-            type: 'file'
-        },
-        {
-            title: 'Slug',
-            name: 'slug',
-            type: 'slug',
-            options: {
-                source: 'title',
-                maxLength: 200
-            },
-        },
-    ], preview: {
-        select: {
-            title: 'title',
-            frames: 'frames'
-        },
-        prepare(selection) {
-            const { title, frames } = selection
+      ],
+    },
+    {
+      title: "Generate Spritesheet",
+      name: "fetch",
+      type: "string",
+      inputComponent: GenerateSpritesheet,
+    },
+    {
+      title: "Generated Spritesheet",
+      name: "spritesheet",
+      type: "image",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: "JSON for Spritesheet",
+      name: "spriteJson",
+      type: "file",
+      validation: (Rule) => Rule.required(),
+    },
+  ],
+  preview: {
+    select: {
+      title: "title",
+      frames: "frames",
+    },
+    prepare(selection) {
+      const { title, frames } = selection
 
-            let previewImage = {}
+      let previewImage = {}
 
-            if (frames && frames.length > 0) {
-                previewImage = frames[0]
-            } else {
-                previewImage = AvatarIcon
-            }
+      if (frames && frames.length > 0) {
+        previewImage = frames[0]
+      } else {
+        previewImage = AvatarIcon
+      }
 
-            return {
-                title: title,
-                media: previewImage
-            }
-        }
-    }
+      return {
+        title: title,
+        media: previewImage,
+      }
+    },
+  },
 }

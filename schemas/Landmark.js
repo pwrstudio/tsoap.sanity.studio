@@ -48,6 +48,7 @@ export default {
       title: "JSON for Spritesheet",
       name: "spriteJson",
       type: "file",
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

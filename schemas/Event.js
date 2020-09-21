@@ -9,6 +9,7 @@ export default {
       title: "Title",
       name: "title",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Connected participants",
@@ -35,6 +36,7 @@ export default {
       title: "Date & time",
       name: "startDate",
       type: "datetime",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Main image",
@@ -57,6 +59,7 @@ export default {
         source: "title",
         maxLength: 200,
       },
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

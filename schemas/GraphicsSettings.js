@@ -30,6 +30,7 @@ export default {
       name: "mapLink",
       type: "reference",
       to: [{ type: "gfxMap" }],
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "NPC avatars",

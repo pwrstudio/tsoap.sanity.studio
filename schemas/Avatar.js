@@ -81,20 +81,13 @@ export default {
       title: "Generated Spritesheet",
       name: "spritesheet",
       type: "image",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "JSON for Spritesheet",
       name: "spriteJson",
       type: "file",
-    },
-    {
-      title: "Slug",
-      name: "slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 200,
-      },
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
