@@ -12,6 +12,7 @@ import Settings from "react-icons/lib/md/settings"
 import Collections from "react-icons/lib/md/collections"
 import Location from "react-icons/lib/md/my-location"
 import Basket from "react-icons/lib/md/shopping-basket"
+import Audio from "react-icons/lib/md/audiotrack"
 
 export default () =>
   S.list()
@@ -46,6 +47,16 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "caseStudyExhibition" })
+        ),
+      S.listItem()
+        .title("Audio Installations")
+        .icon(Audio)
+        .child(
+          S.documentList()
+            .title("Audio Installations")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "audioInstallation" })
         ),
       S.listItem()
         .title("Events")

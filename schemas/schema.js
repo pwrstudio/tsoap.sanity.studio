@@ -10,17 +10,19 @@ import event from "./Event"
 import caseStudy from "./CaseStudy"
 import caseStudyEmergent from "./CaseStudyEmergent"
 import caseStudyExhibition from "./CaseStudyExhibition"
+import audioInstallation from "./AudioInstallation"
 import seminar from "./Seminar"
 import participant from "./Participant"
 import contentEditor from "./ContentEditor"
 import simpleEditor from "./SimpleEditor"
+
 import embedBlock from "./Embed"
 import videoBlock from "./Video"
 import audioBlock from "./Audio"
 import pdfBlock from "./Pdf"
 import fileBlock from "./File"
-import gfxAvatar from "./Avatar"
 
+import gfxAvatar from "./Avatar"
 import gfxCaseStudySprite from "./CaseStudySprite"
 import gfxMap from "./Map"
 import landmark from "./Landmark"
@@ -37,6 +39,7 @@ export default createSchema({
     gfxAvatar,
     gfxMap,
     gfxCaseStudySprite,
+    audioInstallation,
     landmark,
     page,
     event,
