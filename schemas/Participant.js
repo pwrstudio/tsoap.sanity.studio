@@ -1,6 +1,9 @@
+import Account from "react-icons/lib/md/account-circle"
+
 export default {
   title: "Participant",
   name: "participant",
+  icon: Account,
   type: "document",
   fields: [
     {
@@ -10,16 +13,27 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Username",
+      title: "Discourse username",
       name: "username",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
-      title: "Main image",
-      name: "mainImage",
-      type: "image",
+      title: "Avatar",
+      name: "avatarLink",
+      type: "reference",
+      to: [{ type: "avatar" }],
+    },
+    {
+      title: "Seminar group",
+      name: "seminarGroup",
+      type: "string",
       options: {
-        hotspot: true,
+        list: [
+          { title: "Group 1", value: "group-1" },
+          { title: "Group 2", value: "group-2" },
+          { title: "Group 3", value: "group-3" },
+        ],
       },
     },
     {

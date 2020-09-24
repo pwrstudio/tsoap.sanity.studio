@@ -25,10 +25,4 @@ export default {
       type: "image",
     },
   ],
-  preview: {
-    select: {
-      audio: "audioFile",
-    },
-    component: AudioPreview,
-  },
 }

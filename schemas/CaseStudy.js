@@ -24,6 +24,7 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
+      validation: (Rule) => Rule.unique(),
     },
     {
       title: "Connected events",
@@ -40,6 +41,7 @@ export default {
           to: [{ type: "event" }],
         },
       ],
+      validation: (Rule) => Rule.unique(),
     },
     {
       title: "Main image",

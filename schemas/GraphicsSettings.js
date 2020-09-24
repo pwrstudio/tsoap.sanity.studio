@@ -24,6 +24,7 @@ export default {
           to: [{ type: "avatar" }],
         },
       ],
+      validation: (Rule) => Rule.unique(),
     },
     {
       title: "Active map",

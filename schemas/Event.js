@@ -12,7 +12,7 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Connected participants",
+      title: "Participants",
       name: "participants",
       type: "array",
       options: {
@@ -26,11 +26,41 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
+      validation: (Rule) => Rule.unique(),
     },
     {
-      title: "Video stream ID",
-      name: "streamId",
+      title: "Moderators",
+      name: "moderators",
+      type: "array",
+      options: {
+        editModal: "popover",
+      },
+      of: [
+        {
+          title: "Moderator",
+          name: "authorLink",
+          type: "reference",
+          to: [{ type: "participant" }],
+        },
+      ],
+      validation: (Rule) => Rule.unique(),
+    },
+    {
+      title: "Video stream URL",
+      name: "streamURL",
       type: "string",
+    },
+    {
+      title: "Location",
+      name: "seminarGroup",
+      type: "string",
+      options: {
+        list: [
+          { title: "Area 1", value: "area-1" },
+          { title: "Area 2", value: "area-2" },
+          { title: "Area 3", value: "area-3" },
+        ],
+      },
     },
     {
       title: "Date & time",
