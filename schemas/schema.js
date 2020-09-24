@@ -7,12 +7,12 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 // Schemas
 import page from "./Page"
 import event from "./Event"
-import caseStudy from "./CaseStudy"
 import caseStudyEmergent from "./CaseStudyEmergent"
 import caseStudyExhibition from "./CaseStudyExhibition"
 import audioInstallation from "./AudioInstallation"
 import seminar from "./Seminar"
 import participant from "./Participant"
+
 import contentEditor from "./ContentEditor"
 import simpleEditor from "./SimpleEditor"
 
@@ -43,7 +43,6 @@ export default createSchema({
     landmark,
     page,
     event,
-    caseStudy,
     caseStudyEmergent,
     caseStudyExhibition,
     seminar,

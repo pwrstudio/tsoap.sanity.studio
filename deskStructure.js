@@ -19,16 +19,6 @@ export default () =>
     .title("TSoaP")
     .items([
       S.listItem()
-        .title("Case Studies")
-        .icon(Home)
-        .child(
-          S.documentList()
-            .title("Case Studies")
-            .showIcons(true)
-            .filter("_type == $type")
-            .params({ type: "caseStudy" })
-        ),
-      S.listItem()
         .title("Case Studies (Emergent)")
         .icon(Basket)
         .child(
