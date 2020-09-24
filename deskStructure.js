@@ -11,6 +11,7 @@ import Map from "react-icons/lib/md/map"
 import Settings from "react-icons/lib/md/settings"
 import Collections from "react-icons/lib/md/collections"
 import Location from "react-icons/lib/md/my-location"
+import Basket from "react-icons/lib/md/shopping-basket"
 
 export default () =>
   S.list()
@@ -25,6 +26,26 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "caseStudy" })
+        ),
+      S.listItem()
+        .title("Case Studies (Emergent)")
+        .icon(Basket)
+        .child(
+          S.documentList()
+            .title("Case Studies (Emergent)")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "caseStudyEmergent" })
+        ),
+      S.listItem()
+        .title("Case Studies (Exhibition)")
+        .icon(Home)
+        .child(
+          S.documentList()
+            .title("Case Studies (Exhibition)")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "caseStudyExhibition" })
         ),
       S.listItem()
         .title("Events")
