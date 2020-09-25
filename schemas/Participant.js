@@ -19,6 +19,11 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: "Email",
+      name: "email",
+      type: "string",
+    },
+    {
       title: "Avatar",
       name: "avatarLink",
       type: "reference",
