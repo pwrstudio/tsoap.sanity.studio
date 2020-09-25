@@ -34,20 +34,10 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "NPC avatars",
-      name: "npcAvatars",
-      type: "array",
-      options: {
-        editModal: "popover",
-      },
-      of: [
-        {
-          title: "Avatar",
-          name: "avatarLink",
-          type: "reference",
-          to: [{ type: "avatar" }],
-        },
-      ],
+      title: "NPC Avatar",
+      name: "npcAvatarLink",
+      type: "reference",
+      to: [{ type: "avatar" }],
     },
   ],
 }
