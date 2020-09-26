@@ -11,7 +11,7 @@ export default {
     },
     {
       title: "Connected participants",
-      name: "authors",
+      name: "participants",
       type: "array",
       options: {
         editModal: "popover",

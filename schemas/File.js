@@ -13,14 +13,14 @@ export default {
       type: "string",
     },
     {
-      name: "file",
-      type: "file",
-      title: "Other file",
+      title: "File type",
+      name: "fileType",
+      type: "string",
     },
     {
-      title: "Preview image",
-      name: "previewImage",
-      type: "image",
+      name: "file",
+      type: "file",
+      title: "File",
     },
   ],
 }

@@ -1,6 +1,9 @@
+import Home from "react-icons/lib/md/home"
+
 export default {
   title: "Case Study (Exhibition)",
   name: "caseStudyExhibition",
+  icon: Home,
   type: "document",
   fields: [
     {
@@ -11,7 +14,7 @@ export default {
     },
     {
       title: "Connected participants",
-      name: "authors",
+      name: "participants",
       type: "array",
       options: {
         editModal: "popover",
@@ -57,8 +60,8 @@ export default {
       type: "contentEditor",
     },
     {
-      title: "Files",
-      name: "files",
+      title: "Material",
+      name: "material",
       type: "array",
       of: [
         {

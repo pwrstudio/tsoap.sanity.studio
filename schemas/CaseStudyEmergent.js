@@ -1,6 +1,9 @@
+import Basket from "react-icons/lib/md/shopping-basket"
+
 export default {
   title: "Case Study (Emergent)",
   name: "caseStudyEmergent",
+  icon: Basket,
   type: "document",
   fields: [
     {
@@ -23,7 +26,7 @@ export default {
     },
     {
       title: "Connected participants",
-      name: "authors",
+      name: "participants",
       type: "array",
       options: {
         editModal: "popover",

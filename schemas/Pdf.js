@@ -18,10 +18,5 @@ export default {
       title: "Pdf file",
       description: "File format: pdf",
     },
-    {
-      title: "Preview image",
-      name: "previewImage",
-      type: "image",
-    },
   ],
 }
