@@ -65,7 +65,7 @@ export default {
       type: "array",
       of: [
         {
-          type: "image",
+          type: "imageBlock",
         },
         {
           type: "audioBlock",

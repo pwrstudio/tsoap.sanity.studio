@@ -72,12 +72,12 @@ export default {
       type: "contentEditor",
     },
     {
-      title: "Files",
-      name: "files",
+      title: "Material",
+      name: "material",
       type: "array",
       of: [
         {
-          type: "image",
+          type: "imageBlock",
         },
         {
           type: "audioBlock",

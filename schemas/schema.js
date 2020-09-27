@@ -21,6 +21,7 @@ import videoBlock from "./Video"
 import audioBlock from "./Audio"
 import pdfBlock from "./Pdf"
 import fileBlock from "./File"
+import imageBlock from "./ImageBlock"
 
 import gfxAvatar from "./Avatar"
 import gfxCaseStudySprite from "./CaseStudySprite"
@@ -54,5 +55,6 @@ export default createSchema({
     audioBlock,
     pdfBlock,
     fileBlock,
+    imageBlock,
   ]),
 })
