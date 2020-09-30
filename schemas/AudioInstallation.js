@@ -27,6 +27,11 @@ export default {
       validation: (Rule) => Rule.unique(),
     },
     {
+      title: "Audio stream URL",
+      name: "streamURL",
+      type: "url",
+    },
+    {
       title: "Sound file",
       name: "soundFile",
       description: "Format: mp3",
@@ -56,6 +61,11 @@ export default {
       name: "y",
       type: "number",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      title: "Radius",
+      name: "radius",
+      type: "number",
     },
     {
       title: "Sprite",

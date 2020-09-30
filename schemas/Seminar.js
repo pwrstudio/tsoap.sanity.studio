@@ -13,35 +13,38 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Connected participants",
-      name: "authors",
-      type: "array",
+      title: "Discourse user group",
+      name: "seminarGroup",
+      type: "string",
       options: {
-        editModal: "popover",
+        list: [
+          { title: "CN_Claims_Property", value: "CN_Claims_Property" },
+          { title: "CN_Clashing_Tempo", value: "CN_Clashing_Tempo" },
+          { title: "CN_Commodity_Flows", value: "CN_Commodity_Flows" },
+          { title: "CN_ExhaustionImagine", value: "CN_ExhaustionImagine" },
+          { title: "CN_Risk_Equity", value: "CN_Risk_Equity" },
+          { title: "CN_Un_Bounded_Engine", value: "CN_Un_Bounded_Engine" },
+        ],
       },
-      of: [
-        {
-          title: "Participant",
-          name: "authorLink",
-          type: "reference",
-          to: [{ type: "participant" }],
-        },
-      ],
-      validation: (Rule) => Rule.unique(),
     },
     {
-      title: "Intro text",
-      name: "introText",
+      title: "First text block",
+      name: "firstTextBlock",
       type: "contentEditor",
     },
     {
-      title: "Reading list",
-      name: "readingList",
+      title: "Link (More information)",
+      name: "moreInformationLink",
+      type: "url",
+    },
+    {
+      title: "Second text block",
+      name: "secondTextBlock",
       type: "contentEditor",
     },
     {
-      title: "Join link (big blue button)",
-      name: "joinLink",
+      title: "Link (big blue button)",
+      name: "bbbLink",
       type: "url",
     },
     {

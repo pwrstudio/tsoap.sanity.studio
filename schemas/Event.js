@@ -48,7 +48,7 @@ export default {
     {
       title: "Video stream URL",
       name: "streamURL",
-      type: "string",
+      type: "url",
     },
     {
       title: "Location",
