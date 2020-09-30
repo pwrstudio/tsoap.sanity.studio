@@ -13,25 +13,16 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Discourse user group",
-      name: "seminarGroup",
-      type: "string",
-      options: {
-        list: [
-          { title: "CN_Claims_Property", value: "CN_Claims_Property" },
-          { title: "CN_Clashing_Tempo", value: "CN_Clashing_Tempo" },
-          { title: "CN_Commodity_Flows", value: "CN_Commodity_Flows" },
-          { title: "CN_ExhaustionImagine", value: "CN_ExhaustionImagine" },
-          { title: "CN_Risk_Equity", value: "CN_Risk_Equity" },
-          { title: "CN_Un_Bounded_Engine", value: "CN_Un_Bounded_Engine" },
-        ],
-      },
-    },
-    {
       title: "Discourse username",
       name: "username",
       type: "string",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      title: "Seminar",
+      name: "seminarLink",
+      type: "reference",
+      to: [{ type: "seminar" }],
     },
     {
       title: "Email",
@@ -60,4 +51,18 @@ export default {
       validation: (Rule) => Rule.required(),
     },
   ],
+  preview: {
+    select: {
+      title: "name",
+      seminar: "seminarLink.title",
+    },
+    prepare(selection) {
+      const { title, seminar } = selection
+      const subtitle = seminar
+      return {
+        title: title,
+        subtitle: subtitle,
+      }
+    },
+  },
 }

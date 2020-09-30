@@ -13,21 +13,6 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Discourse user group",
-      name: "seminarGroup",
-      type: "string",
-      options: {
-        list: [
-          { title: "CN_Claims_Property", value: "CN_Claims_Property" },
-          { title: "CN_Clashing_Tempo", value: "CN_Clashing_Tempo" },
-          { title: "CN_Commodity_Flows", value: "CN_Commodity_Flows" },
-          { title: "CN_ExhaustionImagine", value: "CN_ExhaustionImagine" },
-          { title: "CN_Risk_Equity", value: "CN_Risk_Equity" },
-          { title: "CN_Un_Bounded_Engine", value: "CN_Un_Bounded_Engine" },
-        ],
-      },
-    },
-    {
       title: "First text block",
       name: "firstTextBlock",
       type: "contentEditor",
