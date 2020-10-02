@@ -18,11 +18,6 @@ export default {
       type: "file",
       title: "video file",
       description: "File format: mp4",
-    },
-    {
-      title: "Preview image",
-      name: "previewImage",
-      type: "image",
-    },
+    }
   ],
 }
