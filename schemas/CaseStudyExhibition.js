@@ -13,6 +13,19 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: "Category",
+      name: "category",
+      type: "string",
+      options: {
+        list: [
+          { title: "Sensing", value: "sensing" },
+          { title: "Archiving", value: "archiving" },
+          { title: "Communication", value: "communication" },
+          { title: "Consensus building", value: "consensus-building" },
+        ],
+      },
+    },
+    {
       title: "Connected participants",
       name: "participants",
       type: "array",

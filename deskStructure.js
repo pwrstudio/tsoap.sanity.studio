@@ -13,6 +13,7 @@ import Collections from "react-icons/lib/md/collections"
 import Location from "react-icons/lib/md/my-location"
 import Basket from "react-icons/lib/md/shopping-basket"
 import Audio from "react-icons/lib/md/audiotrack"
+import Card from "react-icons/lib/md/view-agenda"
 
 export default () =>
   S.list()
@@ -77,6 +78,15 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "participant" })
+        ),
+      S.listItem()
+        .title("Welcome card")
+        .icon(Card)
+        .child(
+          S.editor()
+            .id("welcome-card")
+            .schemaType("page")
+            .documentId("welcome-card")
         ),
       S.listItem()
         .title("Pages")
