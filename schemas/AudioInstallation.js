@@ -64,6 +64,7 @@ export default {
     },
     {
       title: "Radius",
+      description: "In pixels, defaiult is 400",
       name: "radius",
       type: "number",
     },
