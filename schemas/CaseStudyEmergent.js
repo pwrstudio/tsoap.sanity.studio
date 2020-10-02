@@ -21,6 +21,7 @@ export default {
           { title: "Sensing", value: "sensing" },
           { title: "Archiving", value: "archiving" },
           { title: "Communication", value: "communication" },
+          { title: "Consensus building", value: "cnsensus-building" },
         ],
       },
     },
