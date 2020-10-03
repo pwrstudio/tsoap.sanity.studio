@@ -30,6 +30,7 @@ export default () =>
             .schemaType("activeStreams")
             .documentId("active-streams")
         ),
+      S.divider(),
       S.listItem()
         .title("Case Studies (Emergent)")
         .icon(Basket)
