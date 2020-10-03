@@ -29,6 +29,8 @@ import gfxMap from "./Map"
 import landmark from "./Landmark"
 import graphicsSettings from "./GraphicsSettings"
 
+import activeStreams from "./ActiveStreams"
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -56,5 +58,6 @@ export default createSchema({
     pdfBlock,
     fileBlock,
     imageBlock,
+    activeStreams,
   ]),
 })

@@ -5,11 +5,6 @@ export default {
   __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
   fields: [
     {
-      title: "Title",
-      name: "title",
-      type: "string",
-    },
-    {
       title: "Active avatars",
       name: "activeAvatars",
       type: "array",

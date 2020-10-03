@@ -14,11 +14,22 @@ import Location from "react-icons/lib/md/my-location"
 import Basket from "react-icons/lib/md/shopping-basket"
 import Audio from "react-icons/lib/md/audiotrack"
 import Card from "react-icons/lib/md/view-agenda"
+import Live from "react-icons/lib/md/cast"
 
 export default () =>
   S.list()
     .title("TSoaP")
     .items([
+      S.listItem()
+        .title("Active streams")
+        .icon(Live)
+        .child(
+          S.editor()
+            .id("active-streams")
+            .title("Active streams")
+            .schemaType("activeStreams")
+            .documentId("active-streams")
+        ),
       S.listItem()
         .title("Case Studies (Emergent)")
         .icon(Basket)
@@ -85,6 +96,7 @@ export default () =>
         .child(
           S.editor()
             .id("welcome-card")
+            .title("Welcome card")
             .schemaType("page")
             .documentId("welcome-card")
         ),
@@ -152,6 +164,7 @@ export default () =>
                 .child(
                   S.editor()
                     .id("config")
+                    .title("Graphics settings")
                     .schemaType("graphicsSettings")
                     .documentId("graphics-settings")
                 ),
