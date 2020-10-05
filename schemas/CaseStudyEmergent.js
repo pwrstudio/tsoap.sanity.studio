@@ -1,4 +1,5 @@
 import Basket from "react-icons/lib/md/shopping-basket"
+import Link from "react-icons/lib/md/link"
 
 export default {
   title: "Case Study (Emergent)",
@@ -91,6 +92,19 @@ export default {
         },
         {
           type: "fileBlock",
+        },
+        {
+          title: "External link",
+          name: "linkBlock",
+          type: "object",
+          icon: Link,
+          fields: [
+            {
+              type: "url",
+              name: "url",
+              title: "URL",
+            },
+          ],
         },
       ],
     },

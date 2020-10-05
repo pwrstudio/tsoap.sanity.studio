@@ -1,4 +1,5 @@
 import Home from "react-icons/lib/md/home"
+import Link from "react-icons/lib/md/link"
 
 export default {
   title: "Case Study (Exhibition)",
@@ -91,6 +92,20 @@ export default {
         },
         {
           type: "fileBlock",
+        },
+        {
+          title: "External link",
+          name: "linkBlock",
+          type: "object",
+          icon: Link,
+          title: "External link",
+          fields: [
+            {
+              type: "url",
+              name: "url",
+              title: "URL",
+            },
+          ],
         },
       ],
     },
