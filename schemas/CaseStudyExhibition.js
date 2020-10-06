@@ -101,6 +101,11 @@ export default {
           title: "External link",
           fields: [
             {
+              title: "Title",
+              name: "title",
+              type: "string",
+            },
+            {
               type: "url",
               name: "url",
               title: "URL",

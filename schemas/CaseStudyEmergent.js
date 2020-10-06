@@ -100,6 +100,11 @@ export default {
           icon: Link,
           fields: [
             {
+              title: "Title",
+              name: "title",
+              type: "string",
+            },
+            {
               type: "url",
               name: "url",
               title: "URL",
