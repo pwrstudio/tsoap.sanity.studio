@@ -1,4 +1,3 @@
-// pdf.js
 import FileIcon from "react-icons/lib/md/insert-drive-file"
 
 export default {

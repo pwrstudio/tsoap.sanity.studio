@@ -105,6 +105,11 @@ export default {
               name: "url",
               title: "URL",
             },
+            {
+              title: "File type",
+              name: "fileType",
+              type: "string",
+            },
           ],
         },
       ],
