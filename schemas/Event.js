@@ -9,7 +9,7 @@ export default {
       title: "Title",
       name: "title",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Participants",
@@ -26,7 +26,7 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Moderators",
@@ -43,7 +43,24 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
+    },
+    {
+      title: "Connected case studies",
+      name: "connectedCaseStudies",
+      type: "array",
+      options: {
+        editModal: "popover",
+      },
+      of: [
+        {
+          title: "Case study",
+          name: "caseStudyLink",
+          type: "reference",
+          to: [{ type: "caseStudyExhibition" }, { type: "caseStudyEmergent" }],
+        },
+      ],
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Video stream URL",
@@ -66,7 +83,7 @@ export default {
       title: "Date & time",
       name: "startDate",
       type: "datetime",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Main image",
@@ -89,7 +106,7 @@ export default {
         source: "title",
         maxLength: 200,
       },
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
   preview: {
