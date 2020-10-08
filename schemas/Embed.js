@@ -1,6 +1,5 @@
 // Embed.js
 import EmbedIcon from "react-icons/lib/md/picture-in-picture"
-import EmbedPreview from "../components/EmbedPreview"
 
 export default {
   name: "embedBlock",
@@ -15,33 +14,9 @@ export default {
       title: "URL",
     },
     {
-      title: "Bildtext",
+      title: "Caption",
       name: "caption",
       type: "simpleEditor",
     },
-    {
-      title: "Fullbredd",
-      name: "fullWidth",
-      type: "boolean",
-      options: {
-        isHighlighted: true,
-      },
-    },
-    {
-      title: "Bakgrundsfärg",
-      name: "backgroundColor",
-      type: "color",
-      options: {
-        isHighlighted: true,
-      },
-    },
   ],
-  preview: {
-    select: {
-      url: "url",
-      caption: "caption",
-      attribution: "attribution",
-    },
-    component: EmbedPreview,
-  },
 }

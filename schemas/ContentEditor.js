@@ -8,23 +8,23 @@ import alignLeft from "react-icons/lib/md/format-align-left"
 import alignRight from "react-icons/lib/md/format-align-right"
 import imageIcon from "react-icons/lib/md/image"
 
-const highlightRender = (props) => (
+const highlightRender = props => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 )
 
-const alignCenterRender = (props) => (
+const alignCenterRender = props => (
   <p style={{ textAlign: "center" }}>{props.children}</p>
 )
 
-const alignRightRender = (props) => (
+const alignRightRender = props => (
   <p style={{ textAlign: "right" }}>{props.children}</p>
 )
 
-const footNoteRender = (props) => (
+const footNoteRender = props => (
   <span style={{ background: "rgba(0,0,255,0.2)" }}>{props.children}</span>
 )
 
-const noteRender = (props) => (
+const noteRender = props => (
   <p style={{ fontSize: "0.8em" }}>{props.children}</p>
 )
 
@@ -135,22 +135,6 @@ export default {
               name: "attribution",
               type: "string",
               title: "Attribution",
-              options: {
-                isHighlighted: true,
-              },
-            },
-            {
-              title: "Fullbredd",
-              name: "fullWidth",
-              type: "boolean",
-              options: {
-                isHighlighted: true,
-              },
-            },
-            {
-              title: "Bakgrundsfärg",
-              name: "backgroundColor",
-              type: "color",
               options: {
                 isHighlighted: true,
               },

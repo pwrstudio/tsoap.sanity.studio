@@ -18,6 +18,6 @@ export default {
       type: "file",
       title: "video file",
       description: "File format: mp4",
-    }
+    },
   ],
 }
