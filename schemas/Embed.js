@@ -1,11 +1,11 @@
-// Embed.js
-import EmbedIcon from "react-icons/lib/md/picture-in-picture"
+// ICONS
+import { MdPictureInPicture } from "react-icons/md"
 
 export default {
   name: "embedBlock",
   type: "object",
   title: "Embed code",
-  icon: EmbedIcon,
+  icon: MdPictureInPicture,
   fields: [
     {
       name: "url",

@@ -1,17 +1,17 @@
-import Home from "react-icons/lib/md/home"
-import Link from "react-icons/lib/md/link"
+// ICONS
+import { MdHome, MdLink } from "react-icons/md"
 
 export default {
   title: "Case Study (Exhibition)",
   name: "caseStudyExhibition",
-  icon: Home,
+  icon: MdHome,
   type: "document",
   fields: [
     {
       title: "Title",
       name: "title",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Category",
@@ -41,7 +41,7 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Connected events",
@@ -58,7 +58,7 @@ export default {
           to: [{ type: "event" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Main image",
@@ -97,7 +97,7 @@ export default {
           title: "External link",
           name: "linkBlock",
           type: "object",
-          icon: Link,
+          icon: MdLink,
           title: "External link",
           fields: [
             {
@@ -123,20 +123,20 @@ export default {
       title: "X-coordinate",
       name: "x",
       type: "number",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Y-coordinate",
       name: "y",
       type: "number",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Sprite",
       name: "spriteLink",
       type: "reference",
       to: [{ type: "caseStudySprite" }],
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Slug",
@@ -146,7 +146,7 @@ export default {
         source: "title",
         maxLength: 200,
       },
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
 }

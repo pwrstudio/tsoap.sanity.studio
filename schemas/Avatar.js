@@ -1,5 +1,8 @@
-import AvatarIcon from "react-icons/lib/md/image"
+// CUSTOM INPUT
 import GenerateSpritesheet from "../components/GenerateSpritesheet"
+
+// ICONS
+import { MdImage } from "react-icons/md"
 
 export default {
   title: "Avatar",
@@ -81,13 +84,13 @@ export default {
       title: "Generated Spritesheet",
       name: "spritesheet",
       type: "image",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "JSON for Spritesheet",
       name: "spriteJson",
       type: "file",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
   preview: {
@@ -103,7 +106,7 @@ export default {
       if (rest && rest.length > 0) {
         previewImage = rest[0]
       } else {
-        previewImage = AvatarIcon
+        previewImage = MdImage
       }
 
       return {

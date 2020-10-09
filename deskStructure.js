@@ -1,20 +1,23 @@
 import S from "@sanity/desk-tool/structure-builder"
 
 // ICONS
-import Article from "react-icons/lib/md/note"
-import Avatar from "react-icons/lib/md/image"
-import Home from "react-icons/lib/md/home"
-import Event from "react-icons/lib/md/event"
-import SMS from "react-icons/lib/md/sms"
-import Account from "react-icons/lib/md/account-circle"
-import Map from "react-icons/lib/md/map"
-import Settings from "react-icons/lib/md/settings"
-import Collections from "react-icons/lib/md/collections"
-import Location from "react-icons/lib/md/my-location"
-import Basket from "react-icons/lib/md/shopping-basket"
-import Audio from "react-icons/lib/md/audiotrack"
-import Card from "react-icons/lib/md/view-agenda"
-import Live from "react-icons/lib/md/cast"
+import {
+  MdGamepad,
+  MdCast,
+  MdViewAgenda,
+  MdAudioTrack,
+  MdShoppingBasket,
+  MdMyLocation,
+  MdCollections,
+  MdSettings,
+  MdMap,
+  MdAccountCircle,
+  MdSms,
+  MdEvent,
+  MdHome,
+  MdImage,
+  MdNote,
+} from "react-icons/md"
 
 export default () =>
   S.list()
@@ -22,7 +25,7 @@ export default () =>
     .items([
       S.listItem()
         .title("Active streams")
-        .icon(Live)
+        .icon(MdCast)
         .child(
           S.editor()
             .id("active-streams")
@@ -33,7 +36,7 @@ export default () =>
       S.divider(),
       S.listItem()
         .title("Case Studies (Emergent)")
-        .icon(Basket)
+        .icon(MdShoppingBasket)
         .child(
           S.documentList()
             .title("Case Studies (Emergent)")
@@ -43,7 +46,7 @@ export default () =>
         ),
       S.listItem()
         .title("Case Studies (Exhibition)")
-        .icon(Home)
+        .icon(MdHome)
         .child(
           S.documentList()
             .title("Case Studies (Exhibition)")
@@ -53,7 +56,7 @@ export default () =>
         ),
       S.listItem()
         .title("Audio Installations")
-        .icon(Audio)
+        .icon(MdAudioTrack)
         .child(
           S.documentList()
             .title("Audio Installations")
@@ -63,7 +66,7 @@ export default () =>
         ),
       S.listItem()
         .title("Events")
-        .icon(Event)
+        .icon(MdEvent)
         .child(
           S.documentList()
             .title("Events")
@@ -73,7 +76,7 @@ export default () =>
         ),
       S.listItem()
         .title("Seminars")
-        .icon(SMS)
+        .icon(MdSms)
         .child(
           S.documentList()
             .title("Seminars")
@@ -83,7 +86,7 @@ export default () =>
         ),
       S.listItem()
         .title("Participants")
-        .icon(Account)
+        .icon(MdAccountCircle)
         .child(
           S.documentList()
             .title("Participants")
@@ -93,7 +96,7 @@ export default () =>
         ),
       S.listItem()
         .title("Welcome card")
-        .icon(Card)
+        .icon(MdViewAgenda)
         .child(
           S.editor()
             .id("welcome-card")
@@ -103,7 +106,7 @@ export default () =>
         ),
       S.listItem()
         .title("Pages")
-        .icon(Article)
+        .icon(MdNote)
         .child(
           S.documentList()
             .title("Pages")
@@ -114,14 +117,14 @@ export default () =>
       S.divider(),
       S.listItem()
         .title("Graphics")
-        .icon(Collections)
+        .icon(MdCollections)
         .child(
           S.list()
             .title("Graphics")
             .items([
               S.listItem()
                 .title("Avatars")
-                .icon(Avatar)
+                .icon(MdImage)
                 .child(
                   S.documentList()
                     .title("Avatars")
@@ -131,7 +134,7 @@ export default () =>
                 ),
               S.listItem()
                 .title("Case Study Sprites")
-                .icon(Home)
+                .icon(MdHome)
                 .child(
                   S.documentList()
                     .title("Case Study Sprites")
@@ -141,7 +144,7 @@ export default () =>
                 ),
               S.listItem()
                 .title("Maps")
-                .icon(Map)
+                .icon(MdMap)
                 .child(
                   S.documentList()
                     .title("Maps")
@@ -151,7 +154,7 @@ export default () =>
                 ),
               S.listItem()
                 .title("Landmarks")
-                .icon(Location)
+                .icon(MdMyLocation)
                 .child(
                   S.documentList()
                     .title("Landmarks")
@@ -160,8 +163,18 @@ export default () =>
                     .params({ type: "landmark" })
                 ),
               S.listItem()
+                .title("NPCs")
+                .icon(MdGamepad)
+                .child(
+                  S.documentList()
+                    .title("NPCs")
+                    .showIcons(true)
+                    .filter("_type == $type")
+                    .params({ type: "npc" })
+                ),
+              S.listItem()
                 .title("Graphics settings")
-                .icon(Settings)
+                .icon(MdSettings)
                 .child(
                   S.editor()
                     .id("config")

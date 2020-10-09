@@ -1,17 +1,17 @@
-import Basket from "react-icons/lib/md/shopping-basket"
-import Link from "react-icons/lib/md/link"
+// ICONS
+import { MdShoppingBasket, MdLink } from "react-icons/md"
 
 export default {
   title: "Case Study (Emergent)",
   name: "caseStudyEmergent",
-  icon: Basket,
+  icon: MdShoppingBasket,
   type: "document",
   fields: [
     {
       title: "Title",
       name: "title",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Category",
@@ -41,7 +41,7 @@ export default {
           to: [{ type: "participant" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Connected events",
@@ -58,7 +58,7 @@ export default {
           to: [{ type: "event" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Main image",
@@ -97,7 +97,7 @@ export default {
           title: "External link",
           name: "linkBlock",
           type: "object",
-          icon: Link,
+          icon: MdLink,
           fields: [
             {
               title: "Title",
@@ -126,7 +126,7 @@ export default {
         source: "title",
         maxLength: 200,
       },
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
 }

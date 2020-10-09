@@ -1,9 +1,10 @@
-import ImageIcon from "react-icons/lib/md/image"
+// ICONS
+import { MdImage } from "react-icons/md"
 
 export default {
   name: "imageBlock",
   type: "object",
-  icon: ImageIcon,
+  icon: MdImage,
   title: "Image",
   fields: [
     {

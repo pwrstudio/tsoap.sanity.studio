@@ -19,14 +19,14 @@ export default {
           to: [{ type: "avatar" }],
         },
       ],
-      validation: (Rule) => Rule.unique(),
+      validation: Rule => Rule.unique(),
     },
     {
       title: "Active map",
       name: "mapLink",
       type: "reference",
       to: [{ type: "gfxMap" }],
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "NPC Avatar",

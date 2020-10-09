@@ -1,3 +1,4 @@
+// CUSTOM INPUT
 import LoadGrid from "../components/LoadGrid"
 
 export default {
@@ -15,7 +16,7 @@ export default {
       description: "4000x4000 pixel png",
       name: "mainImage",
       type: "image",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Mini map",
@@ -23,14 +24,14 @@ export default {
         "Can be any size – but should have same aspect ratio as main map.",
       name: "miniImage",
       type: "image",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Pathfinding grid",
       description: "400x400 pixel png",
       name: "pathfindingGrid",
       type: "image",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Load grid",

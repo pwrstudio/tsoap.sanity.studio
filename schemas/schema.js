@@ -27,6 +27,7 @@ import gfxAvatar from "./Avatar"
 import gfxCaseStudySprite from "./CaseStudySprite"
 import gfxMap from "./Map"
 import landmark from "./Landmark"
+import npc from "./NPC"
 import graphicsSettings from "./GraphicsSettings"
 
 import activeStreams from "./ActiveStreams"
@@ -59,5 +60,6 @@ export default createSchema({
     fileBlock,
     imageBlock,
     activeStreams,
+    npc,
   ]),
 })

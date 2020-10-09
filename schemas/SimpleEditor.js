@@ -1,9 +1,3 @@
-import highlighter from "react-icons/lib/md/highlight"
-
-const highlightRender = (props) => (
-  <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
-)
-
 export default {
   type: "object",
   name: "simpleEditor",
@@ -29,14 +23,6 @@ export default {
               {
                 title: "Emphasis",
                 value: "em",
-              },
-              {
-                title: "Highlight",
-                value: "highlight",
-                blockEditor: {
-                  icon: highlighter,
-                  render: highlightRender,
-                },
               },
             ],
             annotations: [

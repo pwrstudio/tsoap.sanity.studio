@@ -1,4 +1,4 @@
-import { format, getYear } from "date-fns"
+import { format } from "date-fns"
 
 export default {
   title: "Event",

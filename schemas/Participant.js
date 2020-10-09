@@ -1,22 +1,23 @@
-import Account from "react-icons/lib/md/account-circle"
+// ICONS
+import { MdAccountCircle } from "react-icons/md"
 
 export default {
   title: "Participant",
   name: "participant",
-  icon: Account,
+  icon: MdAccountCircle,
   type: "document",
   fields: [
     {
       title: "Name",
       name: "name",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Discourse username",
       name: "username",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "Seminar",
@@ -48,7 +49,7 @@ export default {
         source: "name",
         maxLength: 200,
       },
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
   preview: {

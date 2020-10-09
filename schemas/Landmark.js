@@ -1,5 +1,8 @@
-import Location from "react-icons/lib/md/my-location"
+// CUSTOM INPUT
 import GenerateSpritesheet from "../components/GenerateSpritesheet"
+
+// ICONS
+import { MdMyLocation } from "react-icons/md"
 
 export default {
   title: "Landmark",
@@ -48,7 +51,7 @@ export default {
       title: "JSON for Spritesheet",
       name: "spriteJson",
       type: "file",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
   preview: {
@@ -64,7 +67,7 @@ export default {
       if (frames && frames.length > 0) {
         previewImage = frames[0]
       } else {
-        previewImage = Location
+        previewImage = MdMyLocation
       }
 
       return {

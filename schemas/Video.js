@@ -1,12 +1,11 @@
-// Video.js
-import MovieIcon from "react-icons/lib/md/videocam"
-import VideoPreview from "../components/VideoPreview"
+// ICONS
+import { MdVideocam } from "react-icons/md"
 
 export default {
   name: "videoBlock",
   type: "object",
   title: "Video",
-  icon: MovieIcon,
+  icon: MdVideocam,
   fields: [
     {
       title: "Title",

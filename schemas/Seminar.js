@@ -1,16 +1,17 @@
-import SMS from "react-icons/lib/md/sms"
+// ICONS
+import { MdSms } from "react-icons/md"
 
 export default {
   title: "Seminar",
   name: "seminar",
-  icon: SMS,
+  icon: MdSms,
   type: "document",
   fields: [
     {
       title: "Title",
       name: "title",
       type: "string",
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       title: "First text block",
@@ -40,7 +41,7 @@ export default {
         source: "title",
         maxLength: 200,
       },
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
 }

@@ -1,11 +1,11 @@
-// Audio.js
-import AudioIcon from "react-icons/lib/md/audiotrack"
+// ICONS
+import { MdAudioTrack } from "react-icons/md"
 
 export default {
   name: "audioBlock",
   type: "object",
   title: "Audio",
-  icon: AudioIcon,
+  icon: MdAudioTrack,
   fields: [
     {
       title: "Title",

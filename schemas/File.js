@@ -1,10 +1,11 @@
-import FileIcon from "react-icons/lib/md/insert-drive-file"
+// ICONS
+import { MdInsertDriveFile } from "react-icons/md"
 
 export default {
   name: "fileBlock",
   type: "object",
   title: "Other file",
-  icon: FileIcon,
+  icon: MdInsertDriveFile,
   fields: [
     {
       title: "Title",

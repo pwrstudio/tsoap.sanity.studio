@@ -1,11 +1,11 @@
-// pdf.js
-import PdfIcon from "react-icons/lib/md/picture-as-pdf"
+// ICONS
+import { MdPictureAsPdf } from "react-icons/md"
 
 export default {
   name: "pdfBlock",
   type: "object",
   title: "Pdf file",
-  icon: PdfIcon,
+  icon: MdPictureAsPdf,
   fields: [
     {
       title: "Title",
