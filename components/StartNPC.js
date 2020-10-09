@@ -35,34 +35,34 @@ class StartNPC extends React.Component {
     this.error = false
     this.forceUpdate()
 
-    // var myHeaders = new Headers()
-    // myHeaders.append("Content-Type", "application/json")
+    var myHeaders = new Headers()
+    myHeaders.append("Content-Type", "application/json")
 
-    // var raw = JSON.stringify(this.props.document)
+    var raw = JSON.stringify(this.props.document)
 
-    // var requestOptions = {
-    //   method: "POST",
-    //   headers: myHeaders,
-    //   body: raw,
-    //   redirect: "follow",
-    // }
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    }
 
-    // fetch("https://graphics.tsoap.dev/grid", requestOptions)
-    //   .then(response => response.json())
-    //   .then(result => {
-    //     this.message = "Pathfinding grid succesfully loaded!"
-    //     this.working = false
-    //     createPatchFrom(Date.now())
-    //     console.dir(result)
-    //     this.forceUpdate()
-    //   })
-    //   .catch(error => {
-    //     this.message = "Loading of pathfinding grid failed!: " + error
-    //     this.working = false
-    //     this.error = true
-    //     console.log("error", error)
-    //     this.forceUpdate()
-    //   })
+    fetch("https://graphics.tsoap.dev/npc", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        this.message = "NPC succesfully started!"
+        this.working = false
+        createPatchFrom(Date.now())
+        console.dir(result)
+        this.forceUpdate()
+      })
+      .catch(error => {
+        this.message = "NPC restart failed!: " + error
+        this.working = false
+        this.error = true
+        console.log("error", error)
+        this.forceUpdate()
+      })
   }
 
   render = () => {
