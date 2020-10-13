@@ -1,7 +1,10 @@
+import { MdAudiotrack } from "react-icons/md";
+
 export default {
   title: "Audio Installation",
   name: "audioInstallation",
   type: "document",
+  icon: MdAudiotrack,
   fields: [
     {
       title: "Title",

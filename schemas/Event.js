@@ -1,9 +1,11 @@
 import { format } from "date-fns"
+import { MdEvent } from "react-icons/md"
 
 export default {
   title: "Event",
   name: "event",
   type: "document",
+  icon: MdEvent,
   fields: [
     {
       title: "Title",

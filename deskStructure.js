@@ -5,7 +5,7 @@ import {
   MdGamepad,
   MdCast,
   MdViewAgenda,
-  MdAudioTrack,
+  MdAudiotrack,
   MdShoppingBasket,
   MdMyLocation,
   MdCollections,
@@ -78,7 +78,7 @@ export default () =>
         ),
       S.listItem()
         .title("Audio Installations")
-        .icon(MdAudioTrack)
+        .icon(MdAudiotrack)
         .child(
           S.documentList()
             .title("Audio Installations")
