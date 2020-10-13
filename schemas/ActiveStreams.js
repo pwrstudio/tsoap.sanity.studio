@@ -5,6 +5,12 @@ export default {
   //   __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
   fields: [
     {
+      title: "Title",
+      name: "title",
+      type: "string",
+      validation: Rule => Rule.required(),
+    },
+    {
       title: "Active stream (Main area)",
       name: "mainStream",
       type: "reference",

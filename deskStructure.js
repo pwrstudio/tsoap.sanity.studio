@@ -17,12 +17,24 @@ import {
   MdHome,
   MdImage,
   MdNote,
+  MdLayers,
+  MdMessage
 } from "react-icons/md"
 
 export default () =>
   S.list()
     .title("TSoaP")
     .items([
+      S.listItem()
+      .title("Global settings")
+      .icon(MdSettings)
+      .child(
+        S.editor()
+          .id("global-settings")
+          .title("Global settings")
+          .schemaType("globalSettings")
+          .documentId("global-settings")
+      ),
       S.listItem()
         .title("Active streams")
         .icon(MdCast)
@@ -32,6 +44,16 @@ export default () =>
             .title("Active streams")
             .schemaType("activeStreams")
             .documentId("active-streams")
+        ),
+      S.listItem()
+        .title("Pinned message")
+        .icon(MdMessage)
+        .child(
+          S.editor()
+            .id("pinned-message")
+            .title("Pinned message")
+            .schemaType("pinnedMessage")
+            .documentId("pinned-message")
         ),
       S.divider(),
       S.listItem()
@@ -95,14 +117,14 @@ export default () =>
             .params({ type: "participant" })
         ),
       S.listItem()
-        .title("Welcome card")
+        .title("Cards")
         .icon(MdViewAgenda)
         .child(
-          S.editor()
-            .id("welcome-card")
-            .title("Welcome card")
-            .schemaType("page")
-            .documentId("welcome-card")
+          S.documentList()
+            .title("Cards")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "card" })
         ),
       S.listItem()
         .title("Pages")
@@ -141,6 +163,16 @@ export default () =>
                     .showIcons(true)
                     .filter("_type == $type")
                     .params({ type: "caseStudySprite" })
+                ),
+              S.listItem()
+                .title("Areas")
+                .icon(MdLayers)
+                .child(
+                  S.documentList()
+                    .title("Areas")
+                    .showIcons(true)
+                    .filter("_type == $type")
+                    .params({ type: "area" })
                 ),
               S.listItem()
                 .title("Maps")

@@ -27,6 +27,11 @@ export default {
       validation: (Rule) => Rule.unique(),
     },
     {
+      title: "Turn off autoplay",
+      name: "noAutoplay",
+      type: "boolean",
+    },
+    {
       title: "Audio stream URL",
       name: "streamURL",
       type: "url",

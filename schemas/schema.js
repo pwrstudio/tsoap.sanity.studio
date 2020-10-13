@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 
 // Schemas
 import page from "./Page"
+import card from "./Card"
 import event from "./Event"
 import caseStudyEmergent from "./CaseStudyEmergent"
 import caseStudyExhibition from "./CaseStudyExhibition"
@@ -29,8 +30,11 @@ import gfxMap from "./Map"
 import landmark from "./Landmark"
 import npc from "./NPC"
 import graphicsSettings from "./GraphicsSettings"
+import area from "./Area"
 
 import activeStreams from "./ActiveStreams"
+import globalSettings from "./GlobalSettings"
+import pinnedMessage from "./PinnedMessage"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -61,5 +65,9 @@ export default createSchema({
     imageBlock,
     activeStreams,
     npc,
+    globalSettings,
+    area,
+    card,
+    pinnedMessage
   ]),
 })
