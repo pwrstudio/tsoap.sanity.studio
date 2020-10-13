@@ -15,6 +15,14 @@ export default {
       type: "contentEditor",
     },
     {
+      title: "Main image",
+      name: "mainImage",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       title: "Slug",
       name: "slug",
       type: "slug",
