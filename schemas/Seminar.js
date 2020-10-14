@@ -14,7 +14,7 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      title: "First text block",
+      title: "Free text block",
       name: "firstTextBlock",
       type: "contentEditor",
     },
@@ -22,11 +22,6 @@ export default {
       title: "Link (More information)",
       name: "moreInformationLink",
       type: "url",
-    },
-    {
-      title: "Second text block",
-      name: "secondTextBlock",
-      type: "contentEditor",
     },
     {
       title: "Link (big blue button)",

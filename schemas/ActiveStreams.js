@@ -2,7 +2,7 @@ export default {
   title: "Active streams",
   name: "activeStreams",
   type: "document",
-  //   __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
+    __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
   fields: [
     {
       title: "Title",

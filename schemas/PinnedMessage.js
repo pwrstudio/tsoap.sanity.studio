@@ -2,7 +2,7 @@ export default {
     title: "Pinned chat message",
     name: "pinnedMessage",
     type: "document",
-    // __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
+    __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
     fields: [
       {
         title: "Title",

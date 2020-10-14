@@ -1,10 +1,16 @@
 // CUSTOM INPUT
 import LoadGrid from "../components/LoadGrid"
 
+// ICONS
+import {
+  MdMap
+} from "react-icons/md"
+
 export default {
   title: "Map",
   name: "gfxMap",
   type: "document",
+  icon: MdMap,
   fields: [
     {
       title: "Title",

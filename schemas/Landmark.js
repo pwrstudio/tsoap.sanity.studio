@@ -8,6 +8,7 @@ export default {
   title: "Landmark",
   name: "landmark",
   type: "document",
+  icon: MdMyLocation,
   fields: [
     {
       title: "Title",

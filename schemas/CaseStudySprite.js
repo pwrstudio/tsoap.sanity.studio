@@ -2,12 +2,13 @@
 import GenerateSpritesheet from "../components/GenerateSpritesheet"
 
 // ICONS
-import { MdImage } from "react-icons/md"
+import { MdImage, MdHome } from "react-icons/md"
 
 export default {
   title: "Case Study Sprite",
   name: "caseStudySprite",
   type: "document",
+  icon: MdHome,
   fields: [
     {
       title: "Title",

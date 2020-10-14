@@ -1,10 +1,10 @@
-import { MdArrowDropDownCircle } from "react-icons/md"
 import React from "react"
 
 export default {
     title: "Area",
     name: "area",
     type: "document",
+    __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
     fields: [
       {
         title: "Title",

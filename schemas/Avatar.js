@@ -8,6 +8,7 @@ export default {
   title: "Avatar",
   name: "avatar",
   type: "document",
+  icon: MdImage,
   fields: [
     {
       title: "Title",
