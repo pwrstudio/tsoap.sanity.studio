@@ -65,6 +65,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "caseStudyEmergent" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Case Studies (Exhibition)")
@@ -75,6 +78,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "caseStudyExhibition" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Audio Installations")
@@ -85,6 +91,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "audioInstallation" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Events")
@@ -95,6 +104,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "event" })
+            .defaultOrdering([
+              { field: "startDate", direction: "asc" },
+            ])
         ),
       S.listItem()
         .title("Seminars")
@@ -105,6 +117,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "seminar" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Participants")
@@ -115,6 +130,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "participant" })
+            .defaultOrdering([
+              { field: "name", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Cards")
@@ -125,6 +143,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "card" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.listItem()
         .title("Pages")
@@ -135,6 +156,9 @@ export default () =>
             .showIcons(true)
             .filter("_type == $type")
             .params({ type: "page" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
+            ])
         ),
       S.divider(),
       S.listItem()
@@ -153,6 +177,9 @@ export default () =>
                     .showIcons(true)
                     .filter("_type == $type")
                     .params({ type: "avatar" })
+                    .defaultOrdering([
+                      { field: "title", direction: "asc" }
+                    ])
                 ),
               S.listItem()
                 .title("Case Study Sprites")
@@ -163,6 +190,9 @@ export default () =>
                     .showIcons(true)
                     .filter("_type == $type")
                     .params({ type: "caseStudySprite" })
+                    .defaultOrdering([
+                      { field: "title", direction: "asc" }
+                    ])
                 ),
               S.listItem()
                 .title("Areas")
@@ -193,6 +223,9 @@ export default () =>
                     .showIcons(true)
                     .filter("_type == $type")
                     .params({ type: "landmark" })
+                    .defaultOrdering([
+                      { field: "title", direction: "asc" }
+                    ])
                 ),
               S.listItem()
                 .title("NPCs")

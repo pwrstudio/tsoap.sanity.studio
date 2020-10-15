@@ -10,6 +10,7 @@ export default {
     {
       title: "Name",
       name: "name",
+      description: "!!! Synced from Discourse",
       type: "string",
       validation: Rule => Rule.required(),
     },
