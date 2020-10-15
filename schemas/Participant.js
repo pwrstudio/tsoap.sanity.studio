@@ -16,6 +16,7 @@ export default {
     {
       title: "Discourse username",
       name: "username",
+      description: "!!! Do not edit this field !!!",
       type: "string",
       validation: Rule => Rule.required(),
     },
