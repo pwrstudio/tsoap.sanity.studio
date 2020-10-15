@@ -16,6 +16,11 @@ export default {
       type: "string",
     },
     {
+      title: "Do not include in random selection",
+      name: "notRandom",
+      type: "boolean",
+    },
+    {
       title: "Rest",
       name: "rest",
       type: "array",
