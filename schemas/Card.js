@@ -16,10 +16,16 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
-        title: "Content",
-        name: "content",
-        type: "contentEditor",
-      }
+        title: "Slides",
+        name: "slides",
+        type: "array",
+        of: [
+          {
+            title: "Content",
+            name: "content",
+            type: "contentEditor",
+          }
+        ],
+      },
     ],
   }
-  
