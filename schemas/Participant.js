@@ -44,6 +44,12 @@ export default {
       type: "contentEditor",
     },
     {
+      title: "Description (Metadata)",
+      description: "If left empty, a description will be generated from the main text",
+      name: "description",
+      type: "text",
+    },
+    {
       title: "Main image",
       name: "mainImage",
       type: "image",

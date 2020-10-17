@@ -70,18 +70,6 @@ export default {
       type: "url",
     },
     {
-      title: "Location",
-      name: "seminarGroup",
-      type: "string",
-      options: {
-        list: [
-          { title: "Area 1", value: "area-1" },
-          { title: "Area 2", value: "area-2" },
-          { title: "Area 3", value: "area-3" },
-        ],
-      },
-    },
-    {
       title: "Date & time",
       name: "startDate",
       type: "datetime",
@@ -99,6 +87,12 @@ export default {
       title: "Content",
       name: "content",
       type: "contentEditor",
+    },
+    {
+      title: "Description (Metadata)",
+      description: "If left empty, a description will be generated from the main text",
+      name: "description",
+      type: "text",
     },
     {
       title: "Slug",
