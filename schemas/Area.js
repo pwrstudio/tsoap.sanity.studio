@@ -13,6 +13,13 @@ export default {
         validation: Rule => Rule.required(),
       },
       {
+        title: "Area index",
+        name: "areaIndex",
+        description: "Do not edit",
+        type: "number",
+        validation: Rule => Rule.required(),
+      },
+      {
         title: "Color",
         name: "color",
         type: "colors",
