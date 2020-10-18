@@ -55,6 +55,10 @@ export default {
                     name: "href",
                     type: "string",
                   },
+                  {
+                    name: "Internal link",
+                    type: "boolean",
+                  },
                 ],
               },
             ],
