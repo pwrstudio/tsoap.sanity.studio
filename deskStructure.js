@@ -18,7 +18,8 @@ import {
   MdImage,
   MdNote,
   MdLayers,
-  MdMessage
+  MdMessage,
+  MdVolumeUp
 } from "react-icons/md"
 
 export default () =>
@@ -54,6 +55,16 @@ export default () =>
             .title("Pinned message")
             .schemaType("pinnedMessage")
             .documentId("pinned-message")
+        ),
+        S.listItem()
+        .title("Audioroom names")
+        .icon(MdVolumeUp)
+        .child(
+          S.editor()
+            .id("audioroom-names")
+            .title("Audioroom names")
+            .schemaType("audioRoomNames")
+            .documentId("audioroom-names")
         ),
       S.divider(),
       S.listItem()

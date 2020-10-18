@@ -35,6 +35,7 @@ import area from "./Area"
 import activeStreams from "./ActiveStreams"
 import globalSettings from "./GlobalSettings"
 import pinnedMessage from "./PinnedMessage"
+import audioRoomNames from "./AudioRoomNames"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -68,6 +69,7 @@ export default createSchema({
     globalSettings,
     area,
     card,
-    pinnedMessage
+    pinnedMessage,
+    audioRoomNames
   ]),
 })
