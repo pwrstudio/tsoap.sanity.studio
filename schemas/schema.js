@@ -8,6 +8,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 import page from "./Page"
 import card from "./Card"
 import event from "./Event"
+import exhibition from "./Exhibition"
 import caseStudyEmergent from "./CaseStudyEmergent"
 import caseStudyExhibition from "./CaseStudyExhibition"
 import audioInstallation from "./AudioInstallation"
@@ -70,6 +71,7 @@ export default createSchema({
     area,
     card,
     pinnedMessage,
-    audioRoomNames
+    audioRoomNames,
+    exhibition
   ]),
 })

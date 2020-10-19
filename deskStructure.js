@@ -19,7 +19,8 @@ import {
   MdNote,
   MdLayers,
   MdMessage,
-  MdVolumeUp
+  MdVolumeUp,
+  MdPalette
 } from "react-icons/md"
 
 export default () =>
@@ -117,6 +118,19 @@ export default () =>
             .params({ type: "event" })
             .defaultOrdering([
               { field: "startDate", direction: "asc" },
+            ])
+        ),
+      S.listItem()
+        .title("Exhibitions")
+        .icon(MdPalette)
+        .child(
+          S.documentList()
+            .title("Exhibitions")
+            .showIcons(true)
+            .filter("_type == $type")
+            .params({ type: "exhibition" })
+            .defaultOrdering([
+              { field: "title", direction: "asc" }
             ])
         ),
       S.listItem()
