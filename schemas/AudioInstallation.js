@@ -46,7 +46,8 @@ export default {
       type: "file",
     },
     {
-      title: "Main image",
+      title: "Main image (Metadata)",
+      description: "Used as preview when sharing to social media",
       name: "mainImage",
       type: "image",
       options: {
