@@ -36,23 +36,23 @@ export default {
         to: [{ type: "area" }],
     },
     {
-        title: "Period",
-        name: "period",
-        type: "string",
-      },
+      title: "Period",
+      name: "period",
+      type: "string",
+    },
     {
-      title: "Main image (Metadata)",
+      title: "Content",
+      name: "content",
+      type: "contentEditor",
+    },
+    {
+      title: "Image (Metadata)",
       description: "Used as preview when sharing to social media",
       name: "mainImage",
       type: "image",
       options: {
         hotspot: true,
       },
-    },
-    {
-      title: "Content",
-      name: "content",
-      type: "contentEditor",
     },
     {
       title: "Description (Metadata)",

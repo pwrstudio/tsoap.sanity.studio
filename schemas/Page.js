@@ -15,7 +15,7 @@ export default {
       type: "contentEditor",
     },
     {
-      title: "Main image (Metadata)",
+      title: "Image (Metadata)",
       description: "Used as preview when sharing to social media",
       name: "mainImage",
       type: "image",

@@ -61,18 +61,18 @@ export default {
       validation: Rule => Rule.unique(),
     },
     {
-      title: "Main image (Metadata)",
+      title: "Text",
+      name: "content",
+      type: "contentEditor",
+    },
+    {
+      title: "Image (Metadata)",
       description: "Used as preview when sharing to social media",
       name: "mainImage",
       type: "image",
       options: {
         hotspot: true,
       },
-    },
-    {
-      title: "Text",
-      name: "content",
-      type: "contentEditor",
     },
     {
       title: "Description (Metadata)",

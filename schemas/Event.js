@@ -76,18 +76,18 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      title: "Main image (Metadata)",
+      title: "Content",
+      name: "content",
+      type: "contentEditor",
+    },
+    {
+      title: "Image (Metadata)",
       description: "Used as preview when sharing to social media",
       name: "mainImage",
       type: "image",
       options: {
         hotspot: true,
       },
-    },
-    {
-      title: "Content",
-      name: "content",
-      type: "contentEditor",
     },
     {
       title: "Description (Metadata)",
