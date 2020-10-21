@@ -13,6 +13,11 @@ export default {
     {
       title: "Active stream (Main area)",
       name: "mainStream",
+      type: "url",
+    },
+    {
+      title: "Active stream event",
+      name: "mainStreamEvent",
       type: "reference",
       to: [{ type: "event" }],
     },
