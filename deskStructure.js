@@ -20,7 +20,8 @@ import {
   MdLayers,
   MdMessage,
   MdVolumeUp,
-  MdPalette
+  MdPalette,
+  MdHelp
 } from "react-icons/md"
 
 export default () =>
@@ -36,6 +37,16 @@ export default () =>
           .title("Global settings")
           .schemaType("globalSettings")
           .documentId("global-settings")
+      ),
+      S.listItem()
+      .title("Tutorial card")
+      .icon(MdHelp)
+      .child(
+        S.editor()
+          .id("tutorial-card")
+          .title("Tutorial card")
+          .schemaType("tutorialCard")
+          .documentId("tutorial-card")
       ),
       S.listItem()
         .title("Active streams")
