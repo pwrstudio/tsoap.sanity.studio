@@ -27,6 +27,11 @@ export default {
         type: "simpleEditor"
       },
       {
+        title: "Show archived events in frontpage preview",
+        name: "showArchived",
+        type: "boolean",
+      },
+      {
         title: "Site description (Metadata)",
         name: "siteDescription",
         type: "text"
