@@ -21,6 +21,11 @@ export default {
         type: "array",
         of: [
           {
+            title: "Top image",
+            name: "topImage",
+            type: "image",
+          },
+          {
             title: "Content",
             name: "content",
             type: "contentEditor",
