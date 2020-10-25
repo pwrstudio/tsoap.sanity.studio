@@ -30,6 +30,12 @@ export default {
       },
     },
     {
+      title: "(Re)start NPC",
+      name: "fetch",
+      type: "string",
+      inputComponent: StartNPC,
+    },
+    {
       title: "Drop-off points",
       name: "dropOffPoints",
       type: "array",
@@ -55,12 +61,6 @@ export default {
           ],
         },
       ],
-    },
-    {
-      title: "(Re)start NPC",
-      name: "fetch",
-      type: "string",
-      inputComponent: StartNPC,
     },
   ],
 }
