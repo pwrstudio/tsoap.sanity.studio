@@ -21,14 +21,21 @@ export default {
         type: "array",
         of: [
           {
-            title: "Top image",
-            name: "topImage",
-            type: "image",
-          },
-          {
-            title: "Content",
-            name: "content",
-            type: "contentEditor",
+            title: 'Slide',
+            name: 'slide',
+            type: 'object',
+            fields: [
+              {
+                title: "Top image",
+                name: "topImage",
+                type: "image",
+              },
+              {
+                title: "Content",
+                name: "content",
+                type: "contentEditor",
+              }
+            ]
           }
         ],
       },

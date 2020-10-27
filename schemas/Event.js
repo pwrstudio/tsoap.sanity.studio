@@ -70,10 +70,15 @@ export default {
       type: "url",
     },
     {
-      title: "Date & time",
+      title: "Start Date & time",
       name: "startDate",
       type: "datetime",
       validation: Rule => Rule.required(),
+    },
+    {
+      title: "End Date & time",
+      name: "endDate",
+      type: "datetime"
     },
     {
       title: "Content",
