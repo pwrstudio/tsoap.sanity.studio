@@ -32,6 +32,11 @@ export default {
         type: "boolean",
       },
       {
+        title: "Disable text chat input",
+        name: "disableChat",
+        type: "boolean",
+      },
+      {
         title: "Site description (Metadata)",
         name: "siteDescription",
         type: "text"

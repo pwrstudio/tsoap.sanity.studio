@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/color-input",
-    "color-list"
+    "color-list",
+    "mux-input"
   ],
   "env": {
     "development": {

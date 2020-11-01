@@ -45,7 +45,12 @@ export default {
       description: "Format: mp3",
       type: "file",
     },
-
+    // {
+    //   title: "Sound file (Mux)",
+    //   name: "muxFile",
+    //   description: "Format: mp3",
+    //   type: 'mux.video'
+    // },
     {
       title: "Text",
       name: "content",
