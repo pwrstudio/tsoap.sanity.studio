@@ -27,6 +27,11 @@ export default {
         type: "simpleEditor"
       },
       {
+        title: "Short eventlist text",
+        name: "eventListText",
+        type: "simpleEditor"
+      },
+      {
         title: "Show archived events in frontpage preview",
         name: "showArchived",
         type: "boolean",
