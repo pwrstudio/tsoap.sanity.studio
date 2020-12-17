@@ -8,6 +8,7 @@ export default {
     name: "tutorialCard",
     icon: MdHelp,
     type: "document",
+    __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
     fields: [
     //   {
     //     title: "Title",
@@ -35,9 +36,27 @@ export default {
                 name: "content",
                 type: "contentEditor",
               }
-            ]
+            ],
+            preview: {
+              select: {
+                topImage: "topImage",
+              },
+              prepare(selection) {
+                const { topImage} = selection
+          
+                return {
+                  title: '',
+                  media: topImage,
+                }
+              },
+            },
           }
         ],
+      },
+      {
+        title: "Disable tutorial cards",
+        name: "disableTutorialCards",
+        type: "boolean",
       },
     ],
   }

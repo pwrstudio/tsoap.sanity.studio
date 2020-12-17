@@ -21,7 +21,8 @@ import {
   MdMessage,
   MdVolumeUp,
   MdPalette,
-  MdHelp
+  MdHelp,
+  MdStar
 } from "react-icons/md"
 
 export default () =>
@@ -57,6 +58,16 @@ export default () =>
             .title("Active streams")
             .schemaType("activeStreams")
             .documentId("active-streams")
+        ),
+        S.listItem()
+        .title("Featured events")
+        .icon(MdStar)
+        .child(
+          S.editor()
+            .id("featured-events")
+            .title("Featured events")
+            .schemaType("featuredEvents")
+            .documentId("featuredEvents")
         ),
       S.listItem()
         .title("Pinned message")

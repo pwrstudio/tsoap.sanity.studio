@@ -38,6 +38,8 @@ import globalSettings from "./GlobalSettings"
 import pinnedMessage from "./PinnedMessage"
 import audioRoomNames from "./AudioRoomNames"
 import tutorialCard from "./TutorialCard"
+import featuredEvents from "./FeaturedEvents"
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -75,5 +77,6 @@ export default createSchema({
     audioRoomNames,
     exhibition,
     tutorialCard,
+    featuredEvents
   ]),
 })
